@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>1.html</title>
+
+    </script>
+  </head>
+  <body>
+     <iframe id="iframe" src="https://daymusic.hb.h5.smyhz.com/" name="content" frameborder="no" style="width: 100%;height: 100vh;"></iframe>
+     <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#iframe").height(0); //用于每次刷新时控制IFRAME高度初始化 
+            var height = $("#iframe").contents().height() + 20;
+            $("#iframe").height(height < 800 ? 800 : height); //最小的高度700
+        }
+    </script>
+      <style>
+    ::-webkit-scrollbar { 
+      display: none;
+    }
+  </style>
+  </body>
+</html>
